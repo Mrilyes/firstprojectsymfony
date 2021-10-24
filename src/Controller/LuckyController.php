@@ -17,4 +17,10 @@ class LuckyController extends AbstractController
             'controller_name' => 'LuckyController',
         ]);
     }
+    public function number(): Response
+    {
+        $number = random_int(0 , 100);
+        return new Response("<h1> Lucky number: {$number} </h1>");
+    }
+
 }
